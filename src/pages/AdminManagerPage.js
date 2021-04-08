@@ -104,8 +104,7 @@ function AdminAddPage(props) {
               </div>
               <div className="col-md-12">
                 <span>Quan Tri Vien :</span>
-                {"  "}
-                <span className="fw-bold text-info">{user.name}</span>{" "}
+                {"  "} <span className="fw-bold text-info">{user.name}</span>{" "}
                 <span onClick={sigout} className="btn btn-outline-secondary">
                   Đăng Xuất
                 </span>
