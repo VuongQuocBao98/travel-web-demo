@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+  font-family: "Indie Flower", cursive;
+}
+#header-nav {
+  border-bottom: 2px solid white;
+}
+
+#header-nav li a {
+  color: aliceblue;
+  animation-name: animation-nav-right;
+  animation-duration: 4s;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Akaya Telivigala", cursive;
+}
+#header-nav li a:hover {
+  color: black;
+  transition: all 1s;
+}
+
+.header-scroll {
+  background-color: linen;
+  color: black;
+  opacity: 0.9;
+  transition: all 1.5s;
+}
+
+.header-scroll #header-nav nav ul li a {
+  color: black;
+  padding: 4px;
+  transition: all 1.5s;
+}
+.header-scroll #header-nav nav ul li a:hover {
+  color: blue;
+  transition: all 1s;
+}
+
+span.navbar-toggler-icon {
+  background-image: none !important;
+  margin-top: 4px;
+}
+
+#logo {
+  display: inline-block;
+  height: 50px;
+  width: 80px;
+  text-decoration: none;
+  margin-right: 150px;
+}
+
+#logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.navbar-nav li a {
+  margin: 8px 15px !important;
+}
+#login {
+  margin-left: auto;
+  margin-right: 10px;
+  font-weight: bold;
+}
+#login > li > a {
+  animation-name: animation-nav-left;
+  animation-duration: 5s;
+  text-transform: uppercase;
+}
+
+/* Banner  */
+
+#banner {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(142, 158, 252, 0.4),
+      hsla(231, 95%, 76%, 0.4)
+    ),
+    url("../images/background-banner.jpg");
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  min-height: 500px;
+  width: 100%;
+  clip-path: ellipse(77% 86% at 60% 14%);
+  z-index: 0;
+  padding-top: 100px;
+}
+
+#banner .card {
+  border: 4px solid white;
+}
+#banner .card img {
+  max-height: 120px;
+}
+
+#banner .card:hover .card-title {
+  color: blueviolet;
+}
+#banner .card .card-title {
+  margin-left: 8px;
+}
+
+#card-story {
+  background: none;
+  color: #070719;
+  border-left: none !important;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#banner {
+  margin-bottom: 50px;
+}
+
+/* POST SLIDE  */
+
+.btn-prev,
+.btn-next {
+  border: 1px solid steelblue;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* POST LIST  */
+
+#post-list img:hover {
+  transform: translateY(-20px);
+  transition: all 1s;
+}
+#post-list .post-content h3:hover {
+  cursor: pointer;
+  color: blueviolet !important;
+  transition: ease-in-out 1s;
+}
+#post-list-travel__title {
+  font-weight: bold;
+  color: blue;
+  text-align: center;
+  border-bottom: 2px solid blue;
+}
+#post-list-share__title {
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+/* FOOTER  */
+footer {
+  margin-top: 20px;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(142, 158, 252, 0.4),
+      hsla(231, 95%, 76%, 0.4)
+    ),
+    url("../images/background-footer.jpg");
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  clip-path: ellipse(73% 51% at 48% 75%);
+  font-weight: bold;
+  font-family: "Akaya Telivigala", cursive;
+}
+
+footer #footer-top {
+  padding-top: 250px;
+}
+footer h3 {
+  color: #ffff00;
+}
+footer p {
+  color: #a52a2a;
+  cursor: pointer;
+  font-size: 18px;
+}
+footer p:hover {
+  color: blue;
+}
+footer p a {
+  text-decoration: none;
+  color: #a52a2a;
+}
+
+/* WOW EFFECT  */
+.rollIn {
+  animation-name: rollIn;
+  animation-duration: 2s;
+}
+.hinge {
+  animation-name: hinge;
+  animation-duration: 2s;
+}
+.bounceInDown.center {
+  animation-name: bounceInDown;
+  animation-duration: 2s;
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 2s;
+}
+.bounceInLeft {
+  animation-name: bounceInLeft;
+  animation-duration: 3.5s;
+}
+
+.rotateIn {
+  animation-name: rotateIn;
+  animation-duration: 3.5s;
+}
+
+@keyframes animation-nav-right {
+  1% {
+    color: rgb(248, 10, 236);
+    transform: translateX(200px);
+  }
+  50% {
+    color: cyan;
+    transform: translateX(-50px);
+  }
+  75% {
+    color: black;
+    transform: translateX(-25px);
+  }
+  100% {
+    color: rgb(68, 252, 13);
+    transform: translateX(0);
+  }
+}
+@keyframes animation-nav-left {
+  0% {
+    color: blanchedalmond;
+    transform: translateX(-200px);
+  }
+  50% {
+    color: cyan;
+    transform: translateX(50px);
+  }
+  75% {
+    color: black;
+    transform: translateX(25px);
+  }
+  100% {
+    color: white;
+    transform: translateX(0);
+  }
+}
+
+/* TRAVEL , SHARE PAGE  */
+
+.travel-content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.travel-sub-content {
+  border-bottom: 1px solid tan;
+}
+
+/* DETAIL PAGE  */
+#detail-banner {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(142, 158, 252, 0.4),
+      hsla(231, 95%, 76%, 0.4)
+    ),
+    url("../images/background-top.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 350px;
+  width: 100%;
+  padding-top: 150px;
+}
+
+#detail-banner h2 {
+  border-bottom: 2px solid #ffff00;
+  padding: 10px 100px;
+  color: #ffff00;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+#detail-content img {
+  max-height: 400px;
+}
+
+#detail-sidebar {
+  margin-top: 50px;
+  font-weight: bold;
+  font-family: "Akaya Telivigala", cursive;
+}
+#detail-sidebar .list-group-item {
+  color: blue !important;
+}
+
+#detail-sidebar h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: lightskyblue;
+  font-weight: bold;
+}
+
+#sidebar-des h3 {
+  margin-top: 50px;
+  color: chocolate;
+  font-family: "Akaya Telivigala", cursive;
+  border-bottom: 1px solid turquoise;
+  border-radius: 3px;
+}
