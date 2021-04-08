@@ -89,9 +89,7 @@ function AdminAddPage(props) {
         dispatch(actionSigout);
         history.push("/admin/login");
       })
-      .catch((error) => {
-        // An error happened.
-      });
+      .catch((error) => {});
   };
   return (
     <React.Fragment>
