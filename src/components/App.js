@@ -6,6 +6,9 @@ import { useDispatch } from "react-redux";
 import { isLogin, setUser } from "../app/LoginSlice";
 import CusPage from "../pages/CusPage";
 import AdminPage from "../pages/AdminPage";
+import routers from "../router";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -33,17 +36,36 @@ function App() {
       // No user is signed in.
     }
   });
+  const showRouters = (routers) => {
+    let show = null;
+    if (routers.length > 0) {
+      show = routers.map((router, index) => {
+        return (
+          <Route
+            key={index}
+            path={router.path}
+            exact={router.exact}
+            component={router.main}
+          />
+        );
+      });
+    }
+    return show;
+  };
 
   return (
     <BrowserRouter>
       <div id="wrapper">
         <Switch>
-          <Route path="/admin" component={AdminPage} />
-          <Route path="/" component={CusPage} />
+          <Route path="/admin">
+            <AdminPage />
+          </Route>
+          <Route path="/">
+            <Header />
+            <Switch>{showRouters(routers)}</Switch>
+            <Footer />
+          </Route>
         </Switch>
-        {/* <Header />
-        <Switch>{showRouters(routers)}</Switch>
-        <Footer /> */}
       </div>
     </BrowserRouter>
   );
