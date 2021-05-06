@@ -18,7 +18,6 @@ function ListPost(props) {
   var dataSearch = filter(data, (el) => {
     return includes(el.title.toLowerCase(), searchParams.toLowerCase());
   });
-
   var dataList = dataSearch.map((post, index) => {
     return <Post key={index} postData={post} />;
   });

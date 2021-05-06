@@ -36,6 +36,7 @@ function Login(props) {
   // Đăng Nhập
   const onSubmit = async (data) => {
     setSpiner(true);
+
     await firebase
       .auth()
       .signInWithEmailAndPassword(data.email, data.password)
@@ -48,7 +49,7 @@ function Login(props) {
           .ref("users/" + user.uid)
           .on("value", (snapshot) => {
             var data = snapshot.val();
-            console.log(data);
+            // console.log(data);
             if (data.role === 1) {
               setErrorMessage(null);
               setSpiner(false);

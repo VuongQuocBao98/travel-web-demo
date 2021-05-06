@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AdminLoginPage from "./AdminLoginPage";
 import AdminManagerPage from "./AdminManagerPage";
 import NotFoundPage from "./NotFoundPage";

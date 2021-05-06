@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import firebase from "../firebase";
 import { useDispatch } from "react-redux";
 import { isLogin, setUser } from "../app/LoginSlice";
-import CusPage from "../pages/CusPage";
+
 import AdminPage from "../pages/AdminPage";
 import routers from "../router";
 import Header from "./Header/Header";
